@@ -9,8 +9,6 @@ import { PhotoService } from '../service/photo.service';
 })
 export class HomePage {
 
-  maPhoto: string = "";
-
   constructor(public photoService: PhotoService) {}
 
   async buttonOuvrirCamera() {
@@ -20,6 +18,6 @@ export class HomePage {
       resultType: CameraResultType.Base64
     });
 
-    this.maPhoto = `data:image/jpeg;base64,${image.base64String}`;
+    this.photoService.ajouterPhoto(`data:image/jpeg;base64,${image.base64String}`);
   }
 }

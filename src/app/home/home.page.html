@@ -6,10 +6,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-thumbnail>
-    <ion-img [src]="maPhoto"></ion-img>
-  </ion-thumbnail>
+<ion-content>
+  <div id="main">
+    <!-- List ion-thumbail  -->
+    <div *ngFor="let urlPhoto of photoService.listPhoto">
+      <app-afficher-photo [photo]="urlPhoto"></app-afficher-photo>
+    </div>
+  </div>
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed" (click)="buttonOuvrirCamera()">
     <ion-fab-button>
