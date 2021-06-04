@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "formation-photo",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
